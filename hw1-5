@@ -1,0 +1,54 @@
+Script started on 2019-01-30 20:49:49-08:00
+]0;tgordon@tgordon-Galaxy-TabPro-S: ~/Documents/161/StudyUp-fork[01;32mtgordon[00m:[01;34m~/Documents/161/StudyUp-fork[00m$ [H[2J]0;tgordon@tgordon-Galaxy-TabPro-S: ~/Documents/161/StudyUp-fork[01;32mtgordon[00m:[01;34m~/Documents/161/StudyUp-fork[00m$ git log
+[?1h=[33mcommit 24292eeea0acf87915a2c98113ac2a81aa28ec81[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m, [m[1;31morigin/dev[m[33m, [m[1;31mecs161/dev[m[33m)[m[m
+Author: vhellendoorn <vhellendoorn@live.nl>[m
+Date:   Thu Jan 24 16:32:15 2019 -0800[m
+[m
+    Bulk update[m
+[m
+[33mcommit 0067dad6d28dbe19b06698bf794c25e67b7c05e7[m[m
+Author: vhellendoorn <vhellendoorn@live.nl>[m
+Date:   Thu Jan 17 18:18:01 2019 -0800[m
+[m
+    Adding rubbish temp file[m
+[m
+[33mcommit 1bf66a1388cddda420490a118b5e879f47aa2876[m[m
+Author: vhellendoorn <vhellendoorn@live.nl>[m
+Date:   Thu Jan 17 18:03:31 2019 -0800[m
+[m
+    Add Location.java[m
+[m
+[33mcommit 2c44c312476680a124fe4bd452c9850c3776d86b[m[m
+Author: unknown <vhellendoorn@live.nl>[m
+Date:   Thu Jan 10 16:43:58 2019 -0800[m
+[m
+    Init[m
+[K[?1l>]0;tgordon@tgordon-Galaxy-TabPro-S: ~/Documents/161/StudyUp-fork[01;32mtgordon[00m:[01;34m~/Documents/161/StudyUp-fork[00m$ git rebase `[K-i
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;39r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[39;1H"~/Documents/161/StudyUp-fork/.git/rebase-merge/git-rebase-todo" 27L, 1067C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1Hnoop
+
+[96m# Rebase [m[1m[96m24292ee[m[96m..[m[1m[96m24292ee[m[96m onto [m[1m[96m24292ee[m[96m (1 command)
+#
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup <commit> = like "squash", but discard this commit's log message
+# x, exec <command> = run command (the rest of the line) using shell
+# d, drop <commit> = remove commit
+# l, label <label> = label current HEAD with a name
+# t, reset <label> = reset HEAD to a label
+# m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]
+# .       create a merge commit using the original merge commit's
+# .       message (or the oneline, if no original merge commit was
+# .       specified). Use -c <commit> to reword the commit message.
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+#       However, if you remove everything, the rebase will be aborted.
+#
+#       
+# Note that empty commits are commented out[m
+[94m~                                                                                                                                            [29;1H~                                                                                                                                            [30;1H~                                                                                                                                            [31;1H~                                                                                                                                            [32;1H~                                                                                                                                            [33;1H~                                                                                                                                            [34;1H~                                                                                                                                            [35;1H~                                                                                                                                            [36;1H~                                                                                                                                            [37;1H~                                    
