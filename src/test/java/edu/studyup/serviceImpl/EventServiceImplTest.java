@@ -76,4 +76,27 @@ class EventServiceImplTest {
 		  });
 	}
 	
+	@Test
+	void testUpdateEventName_emptyName_badCase() {
+		int eventID = 1; 
+		String eventName = ""; 
+		Assertions.assertThrows(StudyUpException.class, () -> {
+			eventServiceImpl.updateEventName(eventID, eventName); 
+		}); 
+	}
+	
+	@Test
+	void testUpdateEventName_longName_badCase() {
+		int eventID = 1; 
+		String eventName = "This is a very very very very loooong event name"; 
+		Assertions.assertThrows(StudyUpException.class, () -> {
+			eventServiceImpl.updateEventName(eventID, eventName); 
+		}); 
+	}
+	
+	@Test 
+	@Disabled
+	void testGetActiveEvents_goodCase() {
+		
+	}
 }
