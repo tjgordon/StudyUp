@@ -95,6 +95,7 @@ class EventServiceImplTest {
 		}); 
 	}
 	
+
 	
 	// Ideas:
 	// - Returns event as active when it isn't / vv
@@ -109,6 +110,59 @@ class EventServiceImplTest {
 		
 		// Should fail because no checking for past events is done, and the only default event should be in the past
 		Assertions.assertEquals(eventServiceImpl.getActiveEvents(), futureEventList);
+	}
+	
+	
+	
+	//this test has a mixture of future and past events, and we only want to
+	//return the events that are in the future. 
+	@Test 
+	void testGetActiveEvents_NotAllEventsFuture_badCase() {
+		// add an event that is in the future and add it to the data storage
+		Event futureEvent = new Event(); 
+		futureEvent.setEventID(2); 
+		//using deprecated constructor for ease of creation
+		futureEvent.setDate(new Date(2020, 3, 23));
+		futureEvent.setName("Event 2");
+		Location location = new Location(-122, 37);
+		futureEvent.setLocation(location);
+		
+		DataStorage.eventData.put(futureEvent.getEventID(), futureEvent); 
+		
+		List<Event> eventList = new ArrayList<>(); 
+		eventList.add(futureEvent); 
+	
+		//test to make sure that only events that are in the future are included
+		Assertions.assertEquals(eventList, eventServiceImpl.getActiveEvents()); 
+	}
+	
+	//if the DataStorage has events that are all in the future, we want to make 
+	//sure that all of them are returned
+	@Test
+	void testGetActiveEvents_OnlyFutureEvents_goodCase() {
+		DataStorage.eventData.clear(); //clear the data storage to be able to add future events
+		Event event1 = new Event(); 
+		event1.setEventID(1); 
+		event1.setDate(new Date(2020, 3, 23));
+		event1.setName("Event 1");
+		Location location = new Location(-122, 37);
+		event1.setLocation(location);
+		
+		Event event2 = new Event(); 
+		event2.setEventID(2); 
+		event2.setDate(new Date(2020, 3, 24));
+		event2.setName("Event 2");
+		event2.setLocation(location);
+		
+		DataStorage.eventData.put(event1.getEventID(), event1); 
+		DataStorage.eventData.put(event2.getEventID(), event2); 
+		
+		List<Event> activeEvents = new ArrayList<>();
+		activeEvents.add(event1); 
+		activeEvents.add(event2); 
+		
+		Assertions.assertEquals(activeEvents, eventServiceImpl.getActiveEvents());
+
 	}
 
 }
