@@ -95,10 +95,39 @@ class EventServiceImplTest {
 		}); 
 	}
 	
+	
+	// Ideas:
+	// - Returns event as active when it isn't / vv
+	// - Not even checking if event is active
+	
 	@Test 
-	@Disabled
-	void testGetActiveEvents_goodCase() {
+	void testGetActiveEvents_notCheckingActive_badCase() {
 		
+		
+		//Create Event3
+//		Event event3 = new Event();
+//		event3.setEventID(3);
+//		// Create known past event
+//		event3.setDate(new Date(1995, 7, 9));
+//		event3.setName("Event 3");
+//		Location location = new Location(-122, 37);
+//		event.setLocation(location);
+//		List<Student> eventStudents = new ArrayList<>();
+//		eventStudents.add(student);
+//		event.setStudents(eventStudents);
+		
+//		DataStorage.eventData.put(event3.getEventID(), event3);
+		
+		
+//		List<Event> pastEventList = new ArrayList<>();
+//		pastEventList.add(event3);
+		
+		// Compare to empty list
+		List<Event> futureEventList = new ArrayList<>();
+
+		
+		// Should fail because no checking for past events is done
+		Assertions.assertEquals(eventServiceImpl.getActiveEvents(), futureEventList);
 	}
 
 }
