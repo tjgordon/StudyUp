@@ -78,19 +78,27 @@ class EventServiceImplTest {
 	
 
 	@Test
-	@Disabled("not ready")
-	void testUpdateMethod_event_null_badcases() {
-		Event event = null;
+	void testUpdateEventName_emptyName_badCase() {
+		int eventID = 1; 
+		String eventName = ""; 
 		Assertions.assertThrows(StudyUpException.class, () -> {
-			eventServiceImpl.updateEvent(event);
-		});
+			eventServiceImpl.updateEventName(eventID, eventName); 
+		}); 
 	}
 	
 	@Test
-	void testbadCase() {
-//		assertEquals(1,2);
-		assertEquals(DataStorage.eventData.size(), 1);
+	void testUpdateEventName_longName_badCase() {
+		int eventID = 1; 
+		String eventName = "This is a very very very very loooong event name"; 
+		Assertions.assertThrows(StudyUpException.class, () -> {
+			eventServiceImpl.updateEventName(eventID, eventName); 
+		}); 
 	}
 	
+	@Test 
+	@Disabled
+	void testGetActiveEvents_goodCase() {
+		
+	}
 
 }
