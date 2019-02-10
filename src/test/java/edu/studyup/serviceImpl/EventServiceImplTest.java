@@ -165,4 +165,9 @@ class EventServiceImplTest {
 
 	}
 
+	
+	
+	// TODO: getPastEvents
+	// get list with both past and future events, check only past
+	
 }
