@@ -46,7 +46,9 @@ public class Event {
 	}
 
 	public Date getDate() {
-		return date;
+		// Copy the date to avoid outside access
+		Date dateCopy = (Date) this.date.clone();
+		return dateCopy;
 	}
 
 	public void setDate(Date date) {
