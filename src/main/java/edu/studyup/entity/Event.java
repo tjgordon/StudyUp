@@ -52,7 +52,10 @@ public class Event {
 	}
 
 	public void setDate(Date date) {
-		this.date = date;
+		// Use Date methods for error checking and create a new object
+		Date newDate = new Date();
+		newDate.setTime(date.getTime());
+		this.date = newDate;
 	}
 
 	public int getEventID() {
