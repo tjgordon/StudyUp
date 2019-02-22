@@ -46,11 +46,16 @@ public class Event {
 	}
 
 	public Date getDate() {
-		return date;
+		// Copy the date to avoid outside access
+		Date dateCopy = (Date) this.date.clone();
+		return dateCopy;
 	}
 
 	public void setDate(Date date) {
-		this.date = date;
+		// Use Date methods for error checking and create a new object
+		Date newDate = new Date();
+		newDate.setTime(date.getTime());
+		this.date = newDate;
 	}
 
 	public int getEventID() {
