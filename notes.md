@@ -4,6 +4,6 @@ Need to source bashrc after login to use docker compose for some reason:
 
 Open new terminal in nginx container:   
 (exec, not run, so that the same instance is used)  
-`docker exec -it 04767454ca43 bash`  
+`docker exec -it docker_database_1 bash`  
 
 
